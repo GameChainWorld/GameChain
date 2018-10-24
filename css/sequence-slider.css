@@ -1,0 +1,424 @@
+#sequence {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  color: white;
+  width: 66%;
+  min-width: 715px;
+  position: relative;
+  z-index: 200;
+}
+#sequence > .sequence-canvas {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.sequence-next,
+.sequence-prev {
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  height: 75px;
+  margin-top: -47.5px;
+}
+.sequence-pause {
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+.sequence-paused {
+  opacity: 0.3;
+}
+.sequence-prev {
+  left: 3%;
+}
+.sequence-next {
+  right: 3%;
+}
+.sequence-prev img,
+.sequence-next img {
+  height: 100%;
+  width: auto;
+}
+
+#sequence-preloader {
+  background: #d9d9d9;
+}
+
+h2 {
+  color: white;
+  font-weight: 200;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+}
+h3 {
+  font-weight: 400;
+}
+.sequence-next,
+.sequence-prev {
+  position: absolute;
+  opacity: 0.6;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.sequence-next:hover,
+.sequence-prev:hover {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  left: 70%;
+  width: 100%;
+  opacity: 0;
+  bottom: 1%;
+  z-index: 50;
+}
+.animate-in .title {
+  left: 45%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.animate-out .title {
+  left: 40%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.subtitle {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  left: 85%;
+  width: 100%;
+  opacity: 0;
+  top: 101%;
+}
+.animate-in .subtitle {
+  left: 45%;
+  opacity: 1;
+  font-size: 17px;
+  color: #c5c5c5;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  margin: 0 0 2.5vw;
+  text-align: left;
+}
+.animate-out .subtitle {
+  left: 35%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.slider-image {
+  left: 30%;
+  bottom: -48%;
+  opacity: 0;
+  position: relative;
+  height: auto !important;
+  max-height: 568px !important;
+  width: 30%;
+  min-width: 225px;
+  max-width: 266px;
+}
+.animate-in .slider-image {
+  left: 5%;
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.animate-out .slider-image {
+  left: 15%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* 3. SLIDER BACKGROUND
+-------------------------------------------------- */
+
+#top-slider {
+  position: relative;
+  width: 100%;
+  height: 46.87vw;
+  text-align: center;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+#top-slider .slider-bg {
+    background: url(../img/slider/background0.jpg);	
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+#top-slider .sequence-logo{
+    padding-top: 49.5%;
+    display: block;
+    width: 100%;
+    background-image: url(../img/contact/GCC_Logo.png);
+    background-size: 200%;
+    background-position: 20% center;
+    background-repeat: no-repeat;
+}
+
+
+#top-slider .slider-content{
+  display: none;
+}
+
+@media only screen and (max-width: 838px) {
+  #top-slider .slider-image {
+    max-height: 530px !important;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+    #sequence {
+      position: initial;
+      width: 68vw;
+      margin: 14vw auto;
+    }
+}
+
+#sequence .load-pdf-content{
+    position: relative;
+    top: -5rem;
+    display: flex;
+}
+#sequence .load-pdf-content .button-load-white {
+  flex: 40%;
+  border: 1px solid rgba(40,215,181,1);
+  border-radius: 25px;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(40,215,181,1);
+  color: #fff;
+}
+#sequence .load-pdf-content .button-load-middle{
+  flex: 20%;
+}
+#sequence .load-pdf-content .button-load-yellow {
+    flex: 40%;
+    border: 1px solid rgba(245,170,81,1);
+    border-radius: 25px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(245,170,81,1);
+    color: #fff;
+}
+
+
+.sequence-slider .load-pdf-content .slider-href-item{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    background: none;
+    text-align: left;
+}
+.sequence-slider .load-pdf-content .topSlider-contact{ width: 33%;}
+.sequence-slider .load-pdf-content .topSlider-text{    
+    width: 52%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.sequence-slider .load-pdf-content .slider-href-item > div{
+    width: 13%;
+}
+.sequence-slider .load-pdf-content .slider-href-item > div > img{
+    width: 100%;
+}
+
+.sequence-slider .load-pdf-content .slider-href-item > span{
+    width: 70%;
+    color: #EC1C25;
+    font-size: 1.3rem;
+}
+.sequence-slider .load-pdf-content .topSlider-text p{
+    font-size: 1.4rem;
+    text-align: justify;
+}
+.sequence-slider .load-pdf-content .topSlider-text img{
+    width: 30%;
+    margin: 0 35%;
+}
+@media only screen and (min-width: 1268px) and (max-width: 1368px){
+  .sequence-slider .load-pdf-content .topSlider-text > div{
+      position: relative;
+      bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 1068px) and (max-width: 1268px){
+    #sequence .load-pdf-content{
+      position: relative;
+      top: -6rem;
+      display: flex;
+    }
+    .sequence-slider .load-pdf-content .topSlider-text p {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+  }
+  .sequence-slider .load-pdf-content .slider-href-item {
+      height: 44px;
+  }
+  @media only screen and (max-width: 1168px) {
+    .sequence-slider .load-pdf-content .topSlider-text > div{
+        position: relative;
+        bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+    #top-slider .container{
+        display: none;
+    }
+    #top-slider {
+      position: relative;
+      width: 100%;
+      height: inherit;
+    }
+    #top-slider .slider-bg {
+      background: inherit;
+      background-color: #191B1A;
+      position: inherit; 
+    }
+    #top-slider .sequence-logo {
+      padding-top: 33%;
+      background-position: 14% center;
+      width: 80%;
+      margin: auto;
+    }
+    #top-slider .slider-content{
+        display: block;
+        margin: auto;
+        color: #fff;
+    }
+    #top-slider .slider-content .load-pdf-content{
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: -1rem;
+    }
+    .sequence-slider .load-pdf-content .topSlider-text {
+        position: initial;
+        width: 84%;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    .sequence-slider .load-pdf-content .topSlider-contact {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #particles-js{
+      display: none;
+    }
+    .sequence-slider .load-pdf-content .slider-href-item {
+        width: 20rem;
+    }
+}
+@media only screen and (max-width: 468px) {
+   #top-slider .sequence-logo {
+      padding-top: 49.5%;
+      background-position: 14% center;
+      width: 80%;
+      margin: auto;
+  }
+  .sequence-slider .load-pdf-content .topSlider-text img {
+      width: 50%;
+      margin: 0 30%;
+  }
+  .sequence-slider .load-pdf-content .topSlider-contact {
+      width: 23rem;
+      margin: 2rem auto;
+  }
+}
+
+
+.selected-language{
+  display: block !important;
+}
+
+/* BACK TO THE TOP BUTTON */
+#top-bt {
+	visibility: hidden;
+}
+.button-top {
+    position: fixed;
+    top: 220px;
+    right: -3px;
+    width: 45px;
+    height: 50px;
+    background-color:#EC1C25;
+    border: 1px solid #EC1C25;
+    z-index: 3000;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+.button-top i {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    color: #fff;
+}
+@media only screen and (max-width: 468px) {
+    .button-top {
+        top: 160px;
+        right: -4px;
+        width: 45px;
+        height: 45px;
+    }
+    .button-top i {
+        left: 10px;
+        font-size: 2.5em;
+    }
+}
+
